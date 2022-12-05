@@ -1,9 +1,12 @@
 using Confitec.RaphaelCampos.Api.Service.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
 namespace Confitec.RaphaelCampos.Api
@@ -26,14 +29,31 @@ namespace Confitec.RaphaelCampos.Api
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .SetIsOriginAllowed(_ => true)
-                .AllowAnyOrigin()
                 .AllowCredentials());
             });
+
             services.AddControllers();
             services.AddRouting(options => options.LowercaseUrls = true);
-            services.RegisterServices(Configuration);
             services.AddControllers();
             services.AddSwaggerGen(c => c.SwaggerDoc("v1", new OpenApiInfo { Title = "Confitec.RaphaelCampos.Api", Version = "v1" }));
+
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
+            services.AddLogging(config =>
+            {
+                config.AddDebug();
+                config.AddConsole();
+                config.AddConfiguration(Configuration);
+                config.AddEventLog();
+                config.AddJsonConsole();
+            });
+
+            services.RegisterServices(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +67,8 @@ namespace Confitec.RaphaelCampos.Api
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors("CorsPolicy");
 
             app.UseRouting();
 

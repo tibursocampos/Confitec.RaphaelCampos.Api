@@ -59,7 +59,7 @@ namespace Confitec.RaphaelCampos.Api.Controllers
         [HttpGet("email")]
         [ProducesResponseType(typeof(UserDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(NotFoundResult), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetByEmailAsync([FromHeader] string email)
+        public async Task<IActionResult> GetByEmailAsync([FromQuery] string email)
         {
             var user = await _userService.GetUserByEmailAsync(email);
             if (user is null)
