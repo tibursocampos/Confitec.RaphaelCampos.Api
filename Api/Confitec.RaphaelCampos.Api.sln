@@ -3,18 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confitec.RaphaelCampos.Api", "Confitec.RaphaelCampos.Api.csproj", "{D01BC23A-7B9A-41D8-AAD3-1D36024FAB8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confitec.RaphaelCampos.Api", "Confitec.RaphaelCampos.Api\Confitec.RaphaelCampos.Api.csproj", "{D01BC23A-7B9A-41D8-AAD3-1D36024FAB8B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{218896BE-3FBC-42AA-A85E-00788414785E} = {218896BE-3FBC-42AA-A85E-00788414785E}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confitec.RaphaelCampos.Api.Tests", "..\Confitec.RaphaelCampos.Api.Tests\Confitec.RaphaelCampos.Api.Tests.csproj", "{47DD929D-0CF9-4368-A148-EF41E353E06F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confitec.RaphaelCampos.Api.Tests", "Confitec.RaphaelCampos.Api.Tests\Confitec.RaphaelCampos.Api.Tests.csproj", "{47DD929D-0CF9-4368-A148-EF41E353E06F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confitec.RaphaelCampos.Api.Domain", "..\Confitec.RaphaelCampos.Api.Domain\Confitec.RaphaelCampos.Api.Domain.csproj", "{89C06D91-77D4-4374-BDCE-A413B7754718}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confitec.RaphaelCampos.Api.Domain", "Confitec.RaphaelCampos.Api.Domain\Confitec.RaphaelCampos.Api.Domain.csproj", "{89C06D91-77D4-4374-BDCE-A413B7754718}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confitec.RaphaelCampos.Api.Persistence", "..\Confitec.RaphaelCampos.Api.Persistence\Confitec.RaphaelCampos.Api.Persistence.csproj", "{4D56E813-1FB0-4DA5-91F7-B752FE800F94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confitec.RaphaelCampos.Api.Persistence", "Confitec.RaphaelCampos.Api.Persistence\Confitec.RaphaelCampos.Api.Persistence.csproj", "{4D56E813-1FB0-4DA5-91F7-B752FE800F94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confitec.RaphaelCampos.Api.Service", "..\Confitec.RaphaelCampos.Api.Service\Confitec.RaphaelCampos.Api.Service.csproj", "{218896BE-3FBC-42AA-A85E-00788414785E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confitec.RaphaelCampos.Api.Service", "Confitec.RaphaelCampos.Api.Service\Confitec.RaphaelCampos.Api.Service.csproj", "{218896BE-3FBC-42AA-A85E-00788414785E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
